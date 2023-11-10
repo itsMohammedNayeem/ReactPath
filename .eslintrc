@@ -1,0 +1,113 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:tailwindcss/recommended",
+    "plugin:i18next/recommended",
+    "plugin:jest-formatting/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["i18next", "react", "react-hooks"],
+  "settings": {
+    "tailwindcss": {
+      // These are the default values but feel free to customize
+      "callees": ["classnames", "clsx", "cx", "class"],
+      "config": "tailwind.config.js", // returned from `loadConfig()` utility if not provided
+      "cssFiles": ["**/*.css", "!**/node_modules", "!**/.*", "!**/dist", "!**/build"],
+      "removeDuplicates": true,
+      "skipClassAttribute": false
+    }
+  },
+  "rules": {
+    "no-console": "warn",
+    "import/no-extraneous-dependencies": "warn",
+    "arrow-parens": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "no-useless-return": "error",
+    "no-unused-expressions": "error",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-sort-props": [
+      1,
+      {
+        "reservedFirst": ["key", "ref"],
+        "callbacksLast": true,
+        "shorthandLast": true,
+        "noSortAlphabetically": true
+      }
+    ],
+    "camelcase": 0,
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "@typescript-eslint/no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "space-return-throw-case": 0,
+    "semi": ["error", "never"],
+    "arrow-body-style": ["error", "as-needed"],
+    "react/button-has-type": 1,
+    "react/jsx-curly-brace-presence": 1,
+    "react/jsx-wrap-multilines": [0, { "return": true }],
+    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-no-literals": 0,
+    "@typescript-eslint/consistent-type-imports": "error",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "error",
+    "implicit-arrow-linebreak": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": ["function-expression", "arrow-function", "function-declaration"],
+        "unnamedComponents": ["function-expression", "arrow-function"]
+      }
+    ],
+    "react/jsx-no-duplicate-props": [1, { "ignoreCase": false }],
+    "object-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "import/prefer-default-export": "off",
+    "operator-linebreak": "off",
+    "max-len": ["warn", { "code": 120 }],
+    "react/jsx-closing-bracket-location": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-throw-literal": "off",
+    "@typescript-eslint/no-empty-function": ["error", { "allow": ["private-constructors"] }],
+    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true, "allowAfterSuper": true }],
+    "function-paren-newline": "off",
+    "tailwindcss/enforces-negative-arbitrary-values": "off"
+  },
+  // overrides need to be copied to prod config
+  "overrides": [
+    {
+      "files": [
+        "src/setupTests.ts",
+        "**/testing/*.tsx",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-props-no-spreading": "off",
+        "i18next/no-literal-string": "off",
+        "tailwindcss/no-custom-classname": "off"
+      }
+    },
+    {
+      "files": ["tailwind.config.js"],
+      "rules": {
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/no-implied-eval": "off",
+        "@typescript-eslint/return-await": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["**/build/*", "**/coverage/*"]
+}

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.prettierrc.js
+vite.config.ts
+postcss.config.js
+tailwind.config.js
+.gitignore
