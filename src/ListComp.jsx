@@ -1,3 +1,11 @@
-export const ListComp = () => {
-  return <div className='flex h-[200px] w-[130px] items-center justify-center rounded-lg border-2'>List</div>
+import Item from './Item'
+
+export const ListComp = ({ items, handleToggle }) => {
+  return (
+    <div className='flexC list'>
+      {items?.map(item => (
+        <Item key={item} item={item} handleToggle={handleToggle} />
+      ))}
+    </div>
+  )
 }

@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.App {
+  height: 100vh;
+}
+
+.top {
+  position: absolute;
+  top: 15px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 5px;
+}
+
+.flexC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.list {
+  min-height: 150px;
+  min-width: 70px;
+  border: solid 1px black;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.actions {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
