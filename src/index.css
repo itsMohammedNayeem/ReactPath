@@ -40,3 +40,44 @@
   gap: 20px;
   padding: 20px;
 }
+
+/* Define animations for moving the button */
+@keyframes moveButtonLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveButtonRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.submit-button {
+  transition: transform 0.5s;
+}
+
+.submit-button.move-left {
+  animation: moveButtonLeft 1s linear infinite;
+}
+
+.submit-button.move-right {
+  animation: moveButtonRight 1s linear infinite;
+}

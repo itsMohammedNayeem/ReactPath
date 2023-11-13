@@ -2,7 +2,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { Button } from '@mui/material'
 
-export const Actions = ({ moveRight, moveLeft }) => {
+const Actions = ({ moveRight, moveLeft }) => {
   return (
     <div className='actions flexC'>
       <Button variant='contained' onClick={moveRight}>
@@ -14,3 +14,5 @@ export const Actions = ({ moveRight, moveLeft }) => {
     </div>
   )
 }
+
+export default Actions

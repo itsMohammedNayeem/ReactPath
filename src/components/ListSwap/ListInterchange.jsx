@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { Button } from '@mui/material'
 
-import { Actions } from './Actions'
-import { items } from './Data'
+import { items } from '../../Data/Data'
+import Actions from './Actions'
 import { ListComp } from './ListComp'
 import { not, intersection } from './Utils'
 
