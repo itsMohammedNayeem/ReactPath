@@ -26,7 +26,7 @@ const InputValidate = () => {
 
   return (
     <div className='App flexC'>
-      <form className='flexC' onSubmit={handleSubmit}>
+      <form className='flexC flexCol' onSubmit={handleSubmit}>
         <TextField
           id='outlined-basic'
           className='p-4'
@@ -38,12 +38,7 @@ const InputValidate = () => {
         />
         <button
           type='submit'
-          className={cx(
-            'submit-button',
-            { disabled: isSubmitDisabled },
-            { 'move-left': buttonPosition === 'left' },
-            { 'move-right': buttonPosition === 'right' }
-          )}
+          className={cx('submit-button', { disabled: isSubmitDisabled }, buttonPosition)}
           disabled={isSubmitDisabled}
           onMouseEnter={handleMouseEnter}>
           submit
